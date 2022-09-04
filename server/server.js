@@ -1,7 +1,8 @@
 const cors = require("cors");
+const { instrument } = require("@socket.io/admin-ui");
 const io = require("socket.io")(3000, {
   cors: {
-    origin: "http://127.0.0.1:5500",
+    origin: ["http://127.0.0.1:5500", "https://admin.socket.io"],
   },
 });
 
@@ -28,3 +29,5 @@ io.on("connection", (socket) => {
     cb(`You joined ${room}`);
   });
 });
+
+instrument(io, { auth: false });
