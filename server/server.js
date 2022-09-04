@@ -23,7 +23,8 @@ io.on("connection", (socket) => {
   });
 
   //   joining rooms
-  socket.on("join-room", (room) => {
+  socket.on("join-room", (room, cb) => {
     socket.join(room);
+    cb(`You joined ${room}`);
   });
 });
