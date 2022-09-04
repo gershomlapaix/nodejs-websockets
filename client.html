@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <style>
+      .chat {
+        border: 1px solid rgb(93, 92, 92);
+        width: 70%;
+        padding:20px 10px;
+      }
+
+      .form{
+       margin: 20px 40px;
+      }
+      .input-container {
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat">
+      <div class="message-container"></div>
+
+      <form class="form">
+        <div class="input-container">
+          <label for="message-input">Message</label>
+          <input type="text" name="" id="message-input" />
+          <button type="submit" id="send-button">Send</button>
+        </div>
+
+        <div class="input-container">
+          <label for="room-input">Room</label>
+          <input type="text" name="" id="room-input" />
+          <button type="submit" id="room-button">Join</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
