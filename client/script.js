@@ -1,12 +1,9 @@
-import {io} from 'socket.io-client'
+const socket = io('http://localhost:3000')
 
 const joinRoomButton = document.getElementById("room-button");
 const messageInput = document.getElementById("message-input");
 const roomInput = document.getElementById("room-input");
 const form = document.getElementById("form");
-
-// set up socket connection]
-const socket = io('http://localhost:3000')
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
